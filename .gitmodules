@@ -1,0 +1,3 @@
+[submodule "blog-demos"]
+	path = blog-demos
+	url = https://github.com/marciot/blog-demos.git
