@@ -24,11 +24,39 @@
 				
 				background-color: white;
 				
+				overflow:   hidden;
+			}
+			
+			body:before {
+				/* Hack to apply a transformation to the background:
+				     http://www.sitepoint.com/css3-transform-background-image/
+				 */
+				content:          "";
+				position:         absolute;
+				top:              -100%;
+				left:             -100%;
+				right:            -100%;
+				bottom:           -100%;
+				z-index:          -1;
+				transform:        rotate(30deg);
+				transform-origin: center center;
+				
+				/* And make it spin!
+				   http://stackoverflow.com/questions/2584138/css3-continuous-rotate-animation-just-like-a-loading-sundial
+				  */
+				  
+				-webkit-animation: spin 100s infinite linear;
+				
 				/* The following makes a graph paper effect:
 				http://stackoverflow.com/questions/3540194/how-to-make-a-grid-like-graph-paper-grid-with-just-css
 				 */
 				background-size: 40px 40px;
-				background-image: linear-gradient(to right, lightBlue 1px, transparent 1px), linear-gradient(to bottom, lightBlue 1px, transparent 1px);
+				background-image: linear-gradient(to right, lightBlue 1px, transparent 1px), linear-gradient(to bottom, lightBlue 1px, transparent 1px); 
+			}
+
+			@-webkit-keyframes spin {
+				0%   {-webkit-transform: rotate(0deg)}
+				100% {-webkit-transform: rotate(360deg)}
 			}
 			
 			/* Flex tutorial: https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
@@ -51,7 +79,7 @@
 				margin-right:     0em;
 			}
 			
-			a {
+			.tiles a {
 				display:          flex;
 				flex-direction:   column;
 				justify-content:  center;
@@ -65,8 +93,6 @@
 				
 				background-color: #FFFFCC;
 				box-shadow:       0.5em 0.5em 1em #888888;
-				
-				padding-bottom:   5em;
 			}
 			
 			a:hover {
@@ -77,6 +103,16 @@
 			h1 {
 				text-transform:   uppercase;
 			}
+			
+			.footer {
+				position:         absolute;
+				bottom:           0px;
+				left:             0px;
+			}
+			
+			.icon {
+				font-size:        6vw;
+			}
 		</style>
 	</head>
 	<body>
@@ -84,11 +120,16 @@
 			<a href="https://mt236.wordpress.com/">
 				<h1>My Tech Blog</h1>
 				3D Printing, Graphics and Javascript
+				<div class="icon">&#x2712;</div>
 			</a>
 			<a href="http://marciot.freeshell.org/" class="last">
 				<h1>My Home Page</h1>
 				Showcasing my Projects and Hobbies
+				<div class="icon">&#x1f3e0;</div>
 			</a>
+		</div>
+		<div class="footer">
+			<a href="https://github.com/marciot/marciot.github.io/blob/master/index.html">Source code</a>
 		</div>
 	</body>
 </html>
