@@ -1,0 +1,34 @@
+.figure {
+  margin:                3em 10% 6em 10%;
+  
+	position:              relative;
+	min-height:            70%;
+	background-repeat:     no-repeat;
+	background-size:       cover;
+	background-position:   center center;
+}
+
+.caption {  
+  position:         absolute;
+  width:            50%;
+  right:            -1em;
+  bottom:           -3em;
+  padding:          0.5em 1em;
+
+  border:           1px solid #4a328e;
+  border-left:      10px solid #4a328e;
+  
+  background-color: #FFFFCC;
+  /* Use transparent shadows here:
+     http://stackoverflow.com/questions/5458716/is-it-possible-to-set-transparency-in-css3-box-shadow
+   */
+  box-shadow:       1em 1em 2em rgba(0,0,0,0.75);
+}
+
+.caption h1 {
+  margin:           0px 0px;
+  text-align:       left;
+  font-variant:     small-caps;
+  font-size:        1.2em;
+  color:            #4a328e;
+}

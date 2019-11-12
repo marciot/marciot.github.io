@@ -1,0 +1,29 @@
+body {
+	font-family: Candara,Calibri,Segoe,"Segoe UI",Optima,Arial,sans-serif;
+  margin: 10em 3em 3em 3em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color:            #4a328e;
+}
+
+p, li {
+  background:     rgba(255,255,255,0.95);
+}
+
+.head {
+  min-height:       70%;
+  text-align:       center;
+  margin-top:       30%;
+  font-size:        150%;
+}
+
+#arrow {
+	padding:              80px;
+	width:                200px;
+	height:               200px;
+}
+
+.footer {
+  margin-top:       10em;
+}

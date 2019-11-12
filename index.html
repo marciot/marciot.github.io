@@ -1,163 +1,121 @@
 <html>
   <head>
-    <title>Marcio's GitHub Page</title>
-     
-    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Walter+Turncoat" />
+    <meta name="Description" content="Software, Graphics, Firmware and 3D Printing">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta property="og:url"                    content="http://www.marciot.com" />
+    <meta property="og:type"                   content="article" />
+    <meta property="og:title"                  content="Marcio's Portfolio" />
+    <meta property="og:description"            content="Software, Graphics, Firmware and 3D Printing." />
+    <meta property="og:image"                  content="http://www.marciot.com/artwork/social-media-banner.jpg" />
+    <meta property="og:image:url"              content="http://www.marciot.com/artwork/social-media-banner.jpg" />
+    <meta property="og:image:type"             content="image/jpg" />
+    <meta property="og:image:width"            content="1200" />
+    <meta property="og:image:height"           content="630" />
     
-    <style>
-      body {
-        /* Make the body take up entire window minus a margin
-           http://stackoverflow.com/questions/485827/css-100-height-with-padding-margin
-         */
-        top:        0;
-        left:       0;
-        right:      0;
-        bottom:     0;
-        margin:     3em;
-        
-        /* Two resources shows how to load custom handwritten fonts:
-         *   http://makeitcg.com/script-handwritten-google-fonts/1910/
-         *   http://designshack.net/articles/css/the-10-best-script-and-handwritten-google-web-fonts/
-         */
-        font-family: 'Walter Turncoat', Helvetica, Sans-serif;
-        
-        background-color: white;
-        
-        /* Use position fixed instead of absolute to fix iPhone overflow:
-           http://stackoverflow.com/questions/3047337/does-overflowhidden-applied-to-body-work-on-iphone-safari
-         */
-        position:   fixed;
-        overflow:  hidden;
-      }
-      
-      .graphPaper {
-        width:      100%;
-        height:     100%;
-      }
-      
-      .graphPaper:before {
-        /* Hack to apply a transformation to the background:
-             http://www.sitepoint.com/css3-transform-background-image/
-         */
-        content:          "";
-        position:         absolute;
-        top:              -100%;
-        left:             -100%;
-        right:            -100%;
-        bottom:           -100%;
-        z-index:          -1;
-        transform:        rotate(30deg);
-        transform-origin: center center;
-        
-        /* And make it spin!
-           http://stackoverflow.com/questions/2584138/css3-continuous-rotate-animation-just-like-a-loading-sundial
-          */
-          
-        animation: spin 100s infinite linear;
-        
-        /* The following makes a graph paper effect:
-        http://stackoverflow.com/questions/3540194/how-to-make-a-grid-like-graph-paper-grid-with-just-css
-         */
-        background-size: 40px 40px;
-        background-image: linear-gradient(to right, lightBlue 1px, transparent 1px), linear-gradient(to bottom, lightBlue 1px, transparent 1px); 
-      }
-
-      @keyframes spin {
-        0%   {transform: rotate(0deg)}
-        100% {transform: rotate(360deg)}
-      }
-
-      /* Flex tutorial: https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
-      .tiles {
-        display:          flex;
-        flex-direction:   row;
-        align-items:      center;
-        
-        font-size:        2vw;
-        color:            violet;
-      }
-      
-      .tiles > * {
-        margin-top:       1em;
-        margin-bottom:    1em;
-        margin-right:     3em;
-      }
-      
-      .tiles > :last-child {
-        margin-right:     0em;
-      }
-      
-      .tiles a {
-        display:          flex;
-        flex-direction:   column;
-        justify-content:  center;
-        
-        width:            50%;
-        height:           40%;
-        
-        text-decoration:  none;
-        text-align:       center;
-        font-variant:     small-caps;
-        
-        background-color: #FFFFCC;
-        box-shadow:       0.5em 0.5em 1em #888888;
-      }
-      
-      a:hover {
-        transform:        scale(1.03);
-        color:            red;
-      }
-      
-      h1 {
-        text-transform:   uppercase;
-      }
-      
-      .footer {
-        position:         absolute;
-        bottom:           0px;
-        left:             0px;
-      }
-      
-      .icon {
-        font-size:        6vw;
-        padding-bottom:   0.25em;
-      }
-    </style>
-  </head>
+    <link rel="stylesheet" type="text/css" href="styles/graph-paper.css">
+    <link rel="stylesheet" type="text/css" href="styles/boxes.css">
+    <link rel="stylesheet" type="text/css" href="styles/theme.css">
+	</head>
   <body>
-    <div class="graphPaper">
-      <div class="stack">
-        <div class="tiles">
-          <a href="https://mt236.wordpress.com/">
-            <h1>My Tech Blog</h1>
-            3D Printing, Graphics and Javascript
-            <div class="icon">&#x2712;&#xFE0E;</div>
-            <!-- I use the variant selector &#xFE0E; to keep iOS devices from using an emoji icon:
-              http://meta.stackexchange.com/questions/261074/prev-next-triangles-rendered-as-emojis-on-ios-devices -->
-          </a>
-          <a href="http://marciot.freeshell.org/" class="last">
-            <h1>My Home Page</h1>
-            Showcasing my Projects and Hobbies
-            <!-- Using a chess piece here since my preferred symbol &#x1f3e0; gets rendered as an emoji in iOS and the above trick does not work -->
-            <div class="icon">&#x265c;&#xFE0E;</div>
-          </a>
-        </div>
-        <div class="tiles">
-          <a href="http://store.marciot.com" class="last">
-            <h1>My Store</h1>
-            Hand-Drawn Science Cartoons
-            <div class="icon">&#9883;&#xFE0E;</div>
-          </a>
-          <a href="http://sponsor.marciot.com" class="last">
-            <h1>My Tip Jar</h1>
-            Help support my projects
-            <div class="icon">&hearts;&#xFE0E;</div>
-          </a>
-        </div>
+		<div class="graphPaper">
+		</div>
+    
+    <div class="cd-fixed-bg head">
+			<h1>Marcio L. Teixeira</h1>
+			<p>
+				Software, Graphics, Firmware and 3D Printing
+			</p>
+			<div id="more">
+				<svg viewBox="0 0 70 70" id="arrow">
+					<polyline points="15,25 35,50 55,25" stroke="#4a328e" stroke-width="5" fill="none"/>
+					<polyline points="35,0 35,50"        stroke="#4a328e" stroke-width="5" fill="none"/>
+				</svg>
+			</div>
+		</div>
+    
+    <h1>Graphics and Virtual Reality</h1>
+
+    <p>
+    Graphics professionals often work with visual tools, but I enjoy making beautiful things with code, algorithms and mathematics.
+    </p>
+
+    <div class="figure" style='background-image: url("artwork/taz-vr.png");'>
+      <div class="caption">
+        <h1>Virtual 3D Printing</h1>
+
+        In this demo, <a href="https://devel.lulzbot.com/vr/taz/">interact with a 3D printer</a> in virtual reality. </a>
       </div>
-      <div class="footer">
-        <a href="https://github.com/marciot/marciot.github.io/blob/master/index.html">Source code</a>
+    </div>
+    
+    <p>
+    My projects have included a diverse mix of web technologies to make captivating, interactive websites that are usable on desktop PCs, mobile as well as in virtual reality using Google Cardboard, the Oculus Rift or the HTC Vive.
+    </p>
+    
+    <div class="figure" style='background-image: url("artwork/graphics-and-vr.png");'>
+      <div class="caption">
+        <h1>Virtual Dome Theater</h1>
+
+        In this demo, <a href="https://www.marciot.com/dome-experiments/demo/?scene=tron&renderer=WebVRDomeRenderer">watch a show</a> in a virtual planetarium dome and try out different seats.</a>
       </div>
+    </div>
+
+    <h1>Firmware and UI Programming</h1>
+
+    <p>
+I enjoy firmware and embedded systems programming, especially when it dovetails with my graphical interests. During my stay at LulzBot, I became one of the top contributors to the Marlin project, implementing many new features and forging a productive working relationship with the upstream Marlin developers.
+    </p>
+
+    <div class="figure" style='background-image: url("artwork/lulzbot_touchscreen_lcd.jpg");'>
+      <div class="caption">
+        <h1>Custom Touch Interfaces</h1>
+
+        At LulzBot, I developed the software for the touch user interfaces for the <em>LulzBot TAZ Pro</em> and the <em>LulzBot Bio</em>.
+      </div>
+    </div>
+
+    <h1>Art & Technology</h1>
+
+    <p>
+      Electronics, software and 3D printing all come together in many of my more artistic projects. My work has been featured in the <a href="https://www.reporterherald.com/2015/10/06/computer-science-allows-marcio-luis-teixeira-to-be-virtually-artistic/">Loveland Reporter Herald</a>, <a href="https://3dprint.com/79623/3d-printed-rainbow-apparatus/">3DPrint.com</a> and Thingiverse.
+    </p>
+    
+    <div class="figure" style='background-image: url("artwork/the-illumination-of-pi.jpg");'>
+      <div class="caption">
+        <h1>The Illumination of Pi</h1>
+
+        This design combines 3D printing and LED illumination.
+      </div>
+    </div>
+
+    <h1>Skills:</h1>
+    <ul>
+      <li>Client-side web technologies such as JavaScript, CSS and HTML.</li>
+      <li>Advanced 2D and 3D web graphics, including THREE.js, WebGL, WebVR and GLSL.</li>
+      <li>Other web technologies such as WebRTC and ASM.js.</li>
+      <li>C++ development for Arduino, including AVR and ARM chips.</li>
+      <li>Touch UI development using FTDI EVE graphics for embedded systems.</li>
+      <li>Back-end server work including Linux, Apache and node.js.</li>
+      <li>3D printing and basic mechanical design in OpenSCAD and FreeCAD.</li>
+      <li>Electronics design using microcontrollers, illumination, sensors and stepper motors.</li>
+    </ul>
+    
+    <br>
+    
+    <h1>Want to hire me as a contractor?</h1>
+    
+    <p>
+      I would love to do work for clients on cool projects that are a good match for my interests and skills.
+    </p>
+    <p>
+      Write <a href='mailt&#111;&#58;ml%74435&#54;&#45;g%&#54;9thu%&#54;2%40&#121;ahoo&#46;co%6D'>m&#108;&#116;4356-&#103;i&#116;&#104;&#117;&#98;&#64;y&#97;h&#111;o&#46;com</a> for rates.
+    </p>
+    <p>
+      Projects involving an open-source license such as the GPL, the MIT license, or Creative Commons will receive priority and discounted rates. 
+    </p>
+    
+    <div class="footer">
+      <a href="https://github.com/marciot">Source code</a>
     </div>
   </body>
 </html>
+
